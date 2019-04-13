@@ -24,6 +24,9 @@ class ViewController: UITableViewController {
             }
         }
         print(picturesStr)
+        
+        title = "Pictures List"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
