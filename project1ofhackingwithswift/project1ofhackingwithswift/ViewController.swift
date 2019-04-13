@@ -25,7 +25,17 @@ class ViewController: UITableViewController {
         }
         print(picturesStr)
     }
+}
 
-
+extension ViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return picturesStr.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "picture", for: indexPath)
+        cell.textLabel?.text = picturesStr[indexPath.row]
+        return cell
+    }
 }
 
