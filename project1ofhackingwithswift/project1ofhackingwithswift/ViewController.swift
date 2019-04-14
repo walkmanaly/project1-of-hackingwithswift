@@ -38,6 +38,7 @@ extension ViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "picture", for: indexPath)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 30.0, weight: UIFont.Weight.bold)
         cell.textLabel?.text = picturesStr[indexPath.row]
         return cell
     }
