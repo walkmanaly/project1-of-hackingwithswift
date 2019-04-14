@@ -23,6 +23,7 @@ class ViewController: UITableViewController {
                 picturesStr.append(item)
             }
         }
+        picturesStr.sort()
         print(picturesStr)
         
         title = "Pictures List"
